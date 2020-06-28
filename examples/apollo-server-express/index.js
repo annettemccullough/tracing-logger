@@ -7,7 +7,7 @@ const serverConfig = require('./server-config');
 const plugin = require('./plugins');
 
 // Import the tracing-logger package
-// const logger = require('@annettemccullough/tracing-logger')
+// const logger = require('tracing-logger')
 const logger = require('../..');
 
 const app = express();

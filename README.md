@@ -35,7 +35,7 @@ const express = require('express');
 const http = require('http');
 
 
-const logger = require('@annettemccullough/tracing-logger')
+const logger = require('tracing-logger')
 
 const app = express();
 app.use(logger.init());
@@ -64,7 +64,7 @@ server.listen('4000', () => {
 
 ## Usage
 ```js
-const logger = require('@annettemccullough/tracing-logger')
+const logger = require('tracing-logger')
 
 const books = [
   {
