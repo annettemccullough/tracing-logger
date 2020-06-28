@@ -1,0 +1,1 @@
+module.exports = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQW5uZXR0ZSBNY0N1bGxvdWdoIiwidXNlcklkIjoiMzhlMmMzODUtYmQyMC00ZTk4LTkxYjctOTMwZDIyOTU5OTg5In0.4FLmu47Yc97LycKPvb5YGBn1lPfHnILgb0sn0n2Xp68';
