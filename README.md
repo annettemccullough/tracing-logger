@@ -30,40 +30,46 @@ Additional values can be appended to the tracing object for automatic inclusion 
 
 ## Initialisation
 ```js
-const { ApolloServer } = require('apollo-server-express');
-const express = require('express');
-const http = require('http');
+const express = require('express')
 
-
+// Import the tracing-logger package
 const logger = require('tracing-logger')
 
-const app = express();
+const app = express()
+const port = 3000
+
+// Initialise the logger, this will create a tracing namespace
+// is unique to the current request.  If that request contains
+// an `x-correlation-id` header the value will be added to the
+// tracing object on the logger, otherwise a new uuid will be
+// gernated and used.
 app.use(logger.init());
 
-const apollo = new ApolloServer({
-  ...
-  context: async ({ req }) => {
-    const authHeader = req.headers.authorisation;
-    const decodedToken = jwt.decode(authHeader.replace('Bearer ', ''));
+app.get('/', (req, res) => {
+  // If an `x-correlation-id` was provided on the
+  // request header it will be used, otherwise one
+  // will be automatically be generated (uuid:v4)
+  logger.info("x-correlation-id attached")
 
-    logger.tracing.set('user-name', decodedToken.name);
-    logger.tracing.set('user-id', decodedToken.userId);
+  // Further tracing values can be added as required
+  logger.tracing.set('service name', 'express example')
+  logger.info("service name attached")
 
-    logger.debug('jwt decoded');
-  },
-});
+  // All tracing values can be accessed at once,
+  // this is useful when passing values to
+  // downstream services
+  res.send(logger.tracing.getAll())
+})
 
-apollo.applyMiddleware({ app });
-
-const server = http.createServer(app);
-
-server.listen('4000', () => {
-  logger.info('🚀  Server ready');
-});
+app.listen(port, () => logger.info(`Example app listening at http://localhost:${port}`))
 ```
 
 ## Usage
 ```js
+// The logger can be imported in any file within
+// the service, it will still have access to the
+// same tracing values which will be automatically
+// included on any logs
 const logger = require('tracing-logger')
 
 const books = [

@@ -1,40 +1,29 @@
 {
-  "name": "tracing-logger",
-  "version": "1.0.2",
-  "description": "simple logging and tracing",
+  "name": "tracing-logger-examples-express",
+  "version": "1.0.0",
+  "description": "tracing-logger-examples-express",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./ --ext js",
-    "lint:fix": "npm run lint -- --fix",
-    "publishConfig": {
-      "registry": "https://npm.pkg.github.com/"
-    }
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/annettemccullough/tracing-logger.git"
   },
-  "keywords": [
-    "logging",
-    "tracing",
-    "correlation"
-  ],
-  "author": "contact@annettemccullough.com",
+  "author": "Annette McCullough <contact@annettemccullough.com> (https://annettemccullough.com/blog)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/annettemccullough/tracing-logger/issues"
   },
   "homepage": "https://github.com/annettemccullough/tracing-logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "tracing-logger": "^1.0.1"
+  },
   "devDependencies": {
     "eslint": "7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2"
-  },
-  "dependencies": {
-    "cls-hooked": "^4.2.2",
-    "lodash": "^4.17.15",
-    "user": "0.0.0",
-    "uuid": "^8.1.0",
-    "winston": "^3.3.2"
   }
 }
