@@ -1,10 +1,11 @@
-const express = require('express')
+const express = require('express');
 
 // Import the tracing-logger package
-const logger = require('tracing-logger')
+const logger = require('tracing-logger');
+// const logger = require('../..');
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
 // Initialise the logger, this will create a tracing namespace
 // is unique to the current request.  If that request contains
@@ -14,19 +15,16 @@ const port = 3000
 app.use(logger.init());
 
 app.get('/', (req, res) => {
-  // If an `x-correlation-id` was provided on the
-  // request header it will be used, otherwise one
-  // will be automatically be generated (uuid:v4)
-  logger.info("x-correlation-id attached")
+  logger.info('x-correlation-id attached');
 
   // Further tracing values can be added as required
-  logger.tracing.set('service name', 'express example')
-  logger.info("service name attached")
+  logger.tracing.set('service name', 'express example');
+  logger.info('service name attached');
 
   // All tracing values can be accessed at once,
   // this is useful when passing values to
   // downstream services
-  res.send(logger.tracing.getAll())
-})
+  res.send(logger.tracing.getAll());
+});
 
-app.listen(port, () => logger.info(`Example app listening at http://localhost:${port}`))
+app.listen(port, () => logger.info(`Example app listening at http://localhost:${port}`));

@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint ./ --ext js",
     "lint:fix": "npm run lint -- --fix",
+    "test": "jest ./",
     "publishConfig": {
       "registry": "https://npm.pkg.github.com/"
     }
@@ -32,6 +33,8 @@
   },
   "dependencies": {
     "cls-hooked": "^4.2.2",
+    "jest": "^26.1.0",
+    "jest-junit": "^11.0.1",
     "lodash": "^4.17.15",
     "user": "0.0.0",
     "uuid": "^8.1.0",

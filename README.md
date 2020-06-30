@@ -46,9 +46,6 @@ const port = 3000
 app.use(logger.init());
 
 app.get('/', (req, res) => {
-  // If an `x-correlation-id` was provided on the
-  // request header it will be used, otherwise one
-  // will be automatically be generated (uuid:v4)
   logger.info("x-correlation-id attached")
 
   // Further tracing values can be added as required
