@@ -1,6 +1,6 @@
 {
   "name": "tracing-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "simple logging and tracing",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/annettemccullough/tracing-logger.git"
+    "url": "https://github.com/annettemccullough/tracing-logger.git"
   },
   "keywords": [
     "logging",

@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/annettemccullough/tracing-logger.git"
+    "url": "https://github.com/annettemccullough/tracing-logger.git"
   },
   "author": "Annette McCullough <contact@annettemccullough.com> (https://annettemccullough.com/blog)",
   "license": "ISC",
