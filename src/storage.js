@@ -8,7 +8,7 @@ const init = () => (request, response, next) => {
   namespace.bindEmitter(response);
 
   let xCorrelationId = _.get(request.headers, 'x-correlation-id', v4());
-  xCorrelationId = xCorrelationId === "" ? v4() : xCorrelationId
+  xCorrelationId = xCorrelationId === '' ? v4() : xCorrelationId;
 
   response.append('x-correlation-id', xCorrelationId);
 

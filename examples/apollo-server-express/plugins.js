@@ -1,7 +1,7 @@
 // Import the tracing-logger package, this will automatically
 // have access to the tracing namespace intialise in index.js
-const logger = require('tracing-logger');
-// const logger = require('../..');
+// const logger = require('tracing-logger');
+const logger = require('../..');
 
 module.exports = {
   requestDidStart(context) {

@@ -1,10 +1,10 @@
 const { gql } = require('apollo-server-express');
-const logger = require('tracing-logger');
 const data = require('./data');
 
 // Import the tracing-logger package, this will automatically
 // have access to the tracing namespace intialise in index.js
-// const logger = require('../..');
+// const logger = require('tracing-logger');
+const logger = require('../..');
 
 const typeDefs = gql`
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.

@@ -3,13 +3,13 @@ const express = require('express');
 const http = require('http');
 const jwt = require('jsonwebtoken');
 
-const logger = require('tracing-logger');
 const serverConfig = require('./server-config');
 const plugin = require('./plugins');
 const authHeader = require('./auth-header');
 
 // Import the tracing-logger package
-// const logger = require('../..');
+// const logger = require('tracing-logger');
+const logger = require('../..');
 
 const app = express();
 
