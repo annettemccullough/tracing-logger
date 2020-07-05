@@ -1,0 +1,40 @@
+{
+  "name": "tracing-logger",
+  "version": "1.0.6",
+  "description": "simple logging and tracing",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ./ --ext js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/annettemccullough/tracing-logger.git"
+  },
+  "keywords": [
+    "logging",
+    "tracing",
+    "correlation"
+  ],
+  "author": "contact@annettemccullough.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annettemccullough/tracing-logger/issues"
+  },
+  "homepage": "https://github.com/annettemccullough/tracing-logger#readme",
+  "devDependencies": {
+    "eslint": "7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2"
+  },
+  "dependencies": {
+    "continuation-local-storage": "^3.2.1",
+    "jest": "^26.1.0",
+    "jest-junit": "^11.0.1",
+    "lodash": "^4.17.15",
+    "user": "0.0.0",
+    "uuid": "^8.1.0",
+    "winston": "^3.3.2"
+  }
+}
